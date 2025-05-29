@@ -1,0 +1,36 @@
+import java.util.*;
+public class ArrayInsertionSort {
+    public static void insertionSort(int arr[]) {
+        for (int i = 1; i < arr.length ; i++) {
+            int current = arr[i];
+            int previous = i - 1;
+            while (previous >= 0 && arr[previous] > current){
+                arr[previous + 1] = arr[previous];
+            previous--;
+        }
+        arr[previous + 1] = current;
+    }
+}
+
+    public static void printArr(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String args[]) {
+        int arr[] = new int[5];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENTER ELEMENTS IN AN ARRAY:");
+        arr[0] = sc.nextInt();
+        arr[1] = sc.nextInt();
+        arr[2] = sc.nextInt();
+        arr[3] = sc.nextInt();
+        arr[4] = sc.nextInt();
+        System.out.println("ARRAY AFTER SORTING THE ELEMENT BY BUBBLE SORT:");
+        insertionSort(arr);
+        printArr(arr);
+    }
+}
+
