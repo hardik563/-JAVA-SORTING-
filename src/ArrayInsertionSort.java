@@ -1,6 +1,6 @@
 import java.util.*;
 public class ArrayInsertionSort {
-    public static void insertionSort(int arr[]) {
+    public static void insertionSort(int []arr) {
         for (int i = 1; i < arr.length ; i++) {
             int current = arr[i];
             int previous = i - 1;
@@ -12,15 +12,15 @@ public class ArrayInsertionSort {
     }
 }
 
-    public static void printArr(int arr[]) {
+    public static void printArr(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
 
-    public static void main(String args[]) {
-        int arr[] = new int[5];
+    public static void main(String[] args) {
+        int[] arr = new int[5];
         Scanner sc = new Scanner(System.in);
         System.out.println("ENTER ELEMENTS IN AN ARRAY:");
         arr[0] = sc.nextInt();
